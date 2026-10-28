@@ -1,0 +1,51 @@
+# TRACE
+
+> TRACE (Transparent Reconnaissance & Attack Correlation Engine) is a reconnaissance and attack correlation engine for web applications and REST APIs, delivered as an expert-led, authorized security assessment.
+
+TRACE is not an internal network scanner: it analyzes web applications, REST APIs, SPAs and WordPress sites. Instead of returning a flat list of alerts, it uses a fact engine and a decision graph to correlate evidence and explain the causal chain behind each finding, ranked by severity.
+
+## Capabilities
+- Web & API reconnaissance: Enumeration of web applications and REST APIs, with a Chromium/Playwright crawler that renders real JavaScript to cover SPAs.
+- Fact-engine correlation: Modules only run once the facts they depend on are established. The decision graph records why every test ran.
+- OWASP Top 10 coverage: BAC/IDOR, injection (SQLi, XSS, SSTI, command injection, LDAP), SSRF, cryptographic failures, outdated components, misconfiguration and JWT.
+- Vulnerability intelligence: Identified versions of servers, libraries and plugins are matched against the NVD and Wordfence Intelligence feeds.
+- Severity-based prioritization: Critical findings come first, along with each finding's lifecycle: new in this assessment or persistent across assessments.
+- Client report: PDF with OWASP/CWE taxonomy, technical evidence, an audit trail and optional mapping to LGPD, Brazil's data protection law. Not legal advice.
+- WordPress: plugin and theme detection with version matching against known vulnerabilities.
+- Intrusive tests only with explicit confirmation; test artifacts are logged and removed at the end.
+
+## Frequently asked questions
+### What is TRACE?
+TRACE stands for Transparent Reconnaissance & Attack Correlation Engine. It is a reconnaissance and attack correlation engine for web applications and REST APIs, delivered as an expert-led security assessment.
+
+### What does TRACE do?
+TRACE discovers endpoints and parameters, profiles technologies and versions, detects vulnerabilities across the OWASP Top 10 taxonomy, correlates evidence and explains the causal chain behind each finding in a report ranked by severity.
+
+### Who is TRACE for?
+Pentesters, red teams, security engineers, SOC teams, threat hunters, consultants and internal security teams who need to understand the attack surface of web applications and APIs.
+
+### What environments can TRACE analyze?
+Web applications and REST APIs, including JavaScript-heavy SPAs and WordPress sites. TRACE does not perform host or port discovery on internal networks.
+
+### Is TRACE a vulnerability scanner?
+It detects vulnerabilities, but its focus is different: relating facts, explaining evidence and prioritizing what matters, instead of returning a long list of isolated alerts.
+
+### How is TRACE different from traditional scanners?
+Traditional scanners usually run every test against everything and report alerts without context. TRACE decides what to test based on what it has already learned about the target, records the reason for each decision in a graph and shows, for every finding, the path of payload, URL and evidence that led to it.
+
+### Can TRACE be used in authorized security assessments?
+Yes, and only in those. Every assessment is expert-led and requires formal authorization from the owner of the environment. Intrusive tests require explicit confirmation, and artifacts created during testing are logged and removed at the end.
+
+### Can TRACE support red team work?
+Yes, during the reconnaissance phase for web applications and APIs: the decision graph shows which chained facts led to each exposure, which helps plan attack paths. TRACE does not cover internal network infrastructure, Active Directory or social engineering.
+
+### Can internal security teams use TRACE?
+Yes. Internal teams use the report to prioritize fixes, track new and persistent findings across assessments and keep a technical audit trail.
+
+### Is TRACE available?
+TRACE is in active development and has been validated against intentionally vulnerable reference targets such as VAmPI and DVWA. Join the early access list for updates, technical releases and invitations when assessment slots open.
+
+## Links
+- [Home](https://trace.example.com/): overview, features, audience and FAQ
+- [Early access](https://trace.example.com/#early-access): mailing list
+- [GitHub](https://github.com/trace-for-hackers/TRACE): source repository
